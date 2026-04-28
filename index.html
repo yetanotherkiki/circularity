@@ -148,6 +148,33 @@ margin-right: 6px;
 }
 .defn em { color: var(–ink); font-style: italic; }
 
+/* action row — download PDF, etc. */
+.actions {
+margin: 14px 0 0;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+font-size: 12px;
+}
+.actions a {
+display: inline-block;
+padding: 5px 11px;
+border: 1px solid var(–rule);
+background: var(–bg-2);
+color: var(–accent);
+text-decoration: none;
+letter-spacing: .04em;
+transition: border-color .15s ease, color .15s ease;
+}
+.actions a:hover, .actions a:focus-visible {
+border-color: var(–accent);
+color: var(–ink);
+}
+.actions a .arr {
+color: var(–dim);
+margin-right: 6px;
+}
+
 /* sections */
 h2.sec {
 font-size: 13px;
@@ -349,6 +376,18 @@ line-height: 1.7;
 }
 footer a { color: var(–accent); }
 footer .meta { color: var(–ink); }
+footer .attribution {
+margin-top: 12px;
+padding-top: 10px;
+border-top: 1px dashed var(–rule);
+color: var(–dim);
+font-size: 11px;
+line-height: 1.5;
+max-width: 60ch;
+margin-left: auto;
+margin-right: auto;
+}
+footer .attribution a { color: var(–accent); }
 
 /* theme toggle */
 .theme-toggle {
@@ -417,6 +456,12 @@ a { color: black; text-decoration: underline; }
 <div class="defn" role="note" aria-label="definition of CE / circularity">
   <span class="term">CE</span> <span class="pos">(n.)</span>
   circular economics. an economic model where materials and goods cycle back into use through reuse, repair, refurbishment, and recycling, rather than the take-make-waste default. also widely called <em>circular economy</em>. circularity is the practice of running things that way at any scale, from a kitchen drawer to a federal supply chain.
+</div>
+
+<div class="actions">
+  <a href="./circularity-at-skullspace.pdf" download>
+    <span class="arr">↓</span>printable copy (pdf, 2 pages)
+  </a>
 </div>
 
 <hr class="rule">
@@ -582,6 +627,10 @@ a { color: black; text-decoration: underline; }
     <a href="https://skullspace.ca">skullspace.ca</a>
     &nbsp;·&nbsp;
     licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  </div>
+  <div class="attribution">
+    this document was generated using <a href="https://claude.ai">claude.ai</a>.
+    <a href="./prompt.html">click here</a> to view a reusable prompt that can be used to create your own proposal to take to a hacker/maker space in your city.
   </div>
 </footer>
 
